@@ -63,7 +63,7 @@ The system is decoupled into a high-performance backend serving the local LLM an
 First, clone the repository and set up your local environment variables:
 
 ```bash
-git clone https://github.com/adamwhite625/text2sql.git
+git clone https://github.com/adamwhite625/Local-Text2SQL-Platform.git
 cd text2sql
 
 # Generate .env from example
