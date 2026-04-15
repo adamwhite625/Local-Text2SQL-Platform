@@ -2,16 +2,37 @@
 
 A professional-grade natural language to SQL conversion system. This project leverages an optimized Gemma-2-2B Small Language Model (SLM) fine-tuned with precision techniques (QLoRA) to deliver high-accuracy, offline SQL generation for complex enterprise databases.
 
+---
+
+## UI Demonstration
+
+### Home Dashboard
+
+Provides a clean interface for schema overview, CSV uploading, and real-time query interaction.
+
+![Text2SQL Home Dashboard](./demo/home.png)
+
+### Vietnamese Query Support
+
+Demonstrates the model's cross-lingual capability, translating Vietnamese natural language into accurate SQL subqueries.
+
+![Vietnamese Query Support](./demo/vietnamese_query.png)
+
+### Live Demo Walkthrough
+
+![Text2SQL Live Demo](./demo/demo.gif)
+
+---
+
 ## Table of Contents
 
-1. Technical Stack
-2. Project Architecture
-3. Installation and Setup
-4. Training Dataset and Methodology
-5. a/b testing (Model Evolution)
-6. Evaluation and Benchmarking
-7. UI Demonstration
-8. Contact and Audit Report
+1. [Technical Stack](#1-technical-stack)
+2. [Project Architecture](#2-project-architecture)
+3. [Installation and Setup](#3-installation-and-setup)
+4. [Training Dataset and Methodology](#4-training-dataset-and-methodology)
+5. [A/B Testing (Model Evolution)](#5-ab-testing-model-evolution)
+6. [Evaluation and Benchmarking](#6-evaluation-and-benchmarking)
+7. [Contact and Audit Report](#7-contact-and-audit-report)
 
 ---
 
@@ -111,14 +132,14 @@ The model training process utilized a dual-dataset strategy to balance broad lan
 * **Structural Specialization (Spider)**: Utilized the Spider dataset with schema-augmentation to enforce professional coding standards, multi-table JOINs, and standard aliasing.
 * **Fine-tuning Technique**: Applied QLoRA via the Unsloth library to optimize the model on consumer-grade hardware while maintaining full-precision performance characteristics.
 
-## 5. a/b testing
+## 5. A/B Testing (Model Evolution)
 
 We conducted three distinct fine-tuning iterations to arrive at a production-ready state:
 
 * **Version 1 (95.0% Accuracy)**: Achieved the highest raw performance but exhibited inconsistent table aliasing and minor hallucination in complex JOIN scenarios.
 * **Version 2 (75.0% Accuracy)**: Tested a "context-heavy" approach. Results indicated that excessive prompt augmentation can deteriorate the model's fundamental SQL reasoning capabilities.
 * **Version 3 (90.0% Accuracy)**: Final Specialist version. Prioritized structural reliability. While accuracy matches the base model on simple questions, its ability to handle cross-domain schemas with standard aliasing (T1, T2) is significantly superior.
-    * **Model Repository**: [Hugging Face Model Hub](https://huggingface.co/adamwhite625/gemma-2-2b-text2sql-v3-spider-augmented)
+  * **Model Repository**: [Hugging Face Model Hub](https://huggingface.co/adamwhite625/gemma-2-2b-text2sql-v3-spider-augmented)
 
 ## 6. Evaluation and Benchmarking
 
