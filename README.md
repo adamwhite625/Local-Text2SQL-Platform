@@ -84,7 +84,7 @@ The system is decoupled into a high-performance backend serving the local LLM an
 First, clone the repository and set up your local environment variables:
 
 ```bash
-git clone https://github.com/adamwhite625/text2sql.git
+git clone https://github.com/adamwhite625/Local-Text2SQL-Platform.git
 cd text2sql
 
 # Generate .env from example
@@ -152,4 +152,16 @@ Performance is measured using a Gold Standard (20-question) suite, verified thro
 | **Gemma-Base** (2B)    |      90.0%      |    12.81s    |        Unstructured        | Strong baseline reasoning            |
 | **GPT-4o-mini**        |     100.0%     |     2.07s     |          Perfect          | Enterprise Baseline (Cloud)          |
 
-## 7. Contact and Audit Report
+## 7. UI Demonstration
+
+### Home Dashboard
+
+Provides a clean interface for schema overview, CSV uploading, and real-time query interaction.
+
+![Text2SQL Home Dashboard](./demo/home.png)
+
+### Vietnamese Query Support
+
+Demonstrates the model's cross-lingual capability, translating Vietnamese natural language into accurate SQL subqueries.
+
+![Vietnamese Query Support](./demo/vietnamese_query.png)
