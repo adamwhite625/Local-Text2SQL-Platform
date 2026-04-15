@@ -32,7 +32,6 @@ Demonstrates the model's cross-lingual capability, translating Vietnamese natura
 4. [Training Dataset and Methodology](#4-training-dataset-and-methodology)
 5. [A/B Testing (Model Evolution)](#5-ab-testing-model-evolution)
 6. [Evaluation and Benchmarking](#6-evaluation-and-benchmarking)
-7. [Contact and Audit Report](#7-contact-and-audit-report)
 
 ---
 
@@ -151,17 +150,3 @@ Performance is measured using a Gold Standard (20-question) suite, verified thro
 | **V3 (Spider-Spec)**   | **90.0%** |    32.27s    | **Standard Aliases** | **Production-ready structure** |
 | **Gemma-Base** (2B)    |      90.0%      |    12.81s    |        Unstructured        | Strong baseline reasoning            |
 | **GPT-4o-mini**        |     100.0%     |     2.07s     |          Perfect          | Enterprise Baseline (Cloud)          |
-
-## 7. UI Demonstration
-
-### Home Dashboard
-
-Provides a clean interface for schema overview, CSV uploading, and real-time query interaction.
-
-![Text2SQL Home Dashboard](./demo/home.png)
-
-### Vietnamese Query Support
-
-Demonstrates the model's cross-lingual capability, translating Vietnamese natural language into accurate SQL subqueries.
-
-![Vietnamese Query Support](./demo/vietnamese_query.png)
